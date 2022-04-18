@@ -1,10 +1,13 @@
-import React from 'react';
+import React from "react";
+import './VideoItem.css';
 
 export default function VideoItem({ video }) {
   return (
-    <div>
-      <img src={video.snippet.thumbnails.medium.url} />
-      {video.snippet.title}
+    <div className="item video-item">
+      <img alt="" className="ui image" src={video.snippet.thumbnails.medium.url} />
+      <div className="content">
+        <div className="header video-title">{video.snippet.title}</div>
+      </div>
     </div>
-  )
+  );
 }
